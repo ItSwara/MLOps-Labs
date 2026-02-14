@@ -1,0 +1,18 @@
+[2026-02-14T20:52:14.792+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab1_SwaraliDegaonkar.load_model_task manual__2026-02-14T20:52:08.355850+00:00 [queued]>
+[2026-02-14T20:52:14.795+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab1_SwaraliDegaonkar.load_model_task manual__2026-02-14T20:52:08.355850+00:00 [queued]>
+[2026-02-14T20:52:14.795+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2026-02-14T20:52:14.799+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): load_model_task> on 2026-02-14 20:52:08.355850+00:00
+[2026-02-14T20:52:14.802+0000] {standard_task_runner.py:57} INFO - Started process 723 to run task
+[2026-02-14T20:52:14.804+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab1_SwaraliDegaonkar', 'load_model_task', 'manual__2026-02-14T20:52:08.355850+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpnxphqloz']
+[2026-02-14T20:52:14.811+0000] {standard_task_runner.py:85} INFO - Job 50: Subtask load_model_task
+[2026-02-14T20:52:14.854+0000] {task_command.py:415} INFO - Running <TaskInstance: Airflow_Lab1_SwaraliDegaonkar.load_model_task manual__2026-02-14T20:52:08.355850+00:00 [running]> on host a052f1e45f3a
+[2026-02-14T20:52:14.951+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swarali Degaonkar' AIRFLOW_CTX_DAG_ID='Airflow_Lab1_SwaraliDegaonkar' AIRFLOW_CTX_TASK_ID='load_model_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-14T20:52:08.355850+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-14T20:52:08.355850+00:00'
+[2026-02-14T20:52:14.990+0000] {logging_mixin.py:151} INFO - (RF) Train RMSE (from build_save_model): 1.1823709043931838
+[2026-02-14T20:52:15.189+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/ensemble/_base.py:214: UserWarning: Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1
+  n_jobs = min(effective_n_jobs(n_jobs), n_estimators)
+
+[2026-02-14T20:52:15.202+0000] {logging_mixin.py:151} INFO - Predicted Sleep_Quality for test students: [6.006666666666667, 4.526666666666666, 4.52, 8.693333333333333, 3.5833333333333335]
+[2026-02-14T20:52:15.203+0000] {python.py:194} INFO - Done. Returned value was: 6.006666666666667
+[2026-02-14T20:52:15.227+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab1_SwaraliDegaonkar, task_id=load_model_task, execution_date=20260214T205208, start_date=20260214T205214, end_date=20260214T205215
+[2026-02-14T20:52:15.277+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2026-02-14T20:52:15.294+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

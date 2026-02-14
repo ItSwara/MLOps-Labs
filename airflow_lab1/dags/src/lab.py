@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.cluster import KMeans
-from kneed import KneeLocator
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
 import pickle
 import os
 import base64
@@ -28,7 +28,7 @@ def data_preprocessing(data_b64: str):
 
     df = df.dropna()
     # Select sleep-related features for clustering
-    clustering_data = df[["Sleep_Duration", "Sleep_Quality", "Caffeine_Intake", "Screen_Time", "Physical_Activity"]]
+    clustering_data = df[["Sleep_Duration", "Caffeine_Intake", "Screen_Time", "Physical_Activity"]]
 
     min_max_scaler = MinMaxScaler()
     clustering_data_minmax = min_max_scaler.fit_transform(clustering_data)
@@ -40,70 +40,81 @@ def data_preprocessing(data_b64: str):
 
 def build_save_model(data_b64: str, filename: str):
     """
-    Builds a KMeans model on the preprocessed data and saves it.
-    Uses elbow method to find optimal k, then trains final model with that k.
-    Returns the SSE list (JSON-serializable).
+    Builds a RandomForestRegressor model on the preprocessed data and saves it.
+    Returns a list (JSON-safe) similar to SSE list (we return per-tree OOB-like proxy is not available without oob).
+    We'll return a simple list with one value: train RMSE (still JSON-safe list).
     """
-    # decode -> bytes -> numpy array
+    # decode -> bytes -> numpy array (scaled features) AND y (we'll rebuild y from file.csv to keep flow same)
     data_bytes = base64.b64decode(data_b64)
-    df = pickle.loads(data_bytes)
+    X_scaled = pickle.loads(data_bytes)
 
-    kmeans_kwargs = {"init": "random", "n_init": 10, "max_iter": 300, "random_state": 42}
-    sse = []
-    
-    # Test different k values to find the elbow
-    for k in range(1, 50):
-        kmeans = KMeans(n_clusters=k, **kmeans_kwargs)
-        kmeans.fit(df)
-        sse.append(kmeans.inertia_)
+    # Load the original df again to get y (keeping overall structure unchanged)
+    df = pd.read_csv(os.path.join(os.path.dirname(__file__), "../data/file.csv"))
+    df = df.dropna()
 
-    # Find optimal k using elbow method
-    kl = KneeLocator(range(1, 50), sse, curve="convex", direction="decreasing")
-    optimal_k = kl.elbow
-    print(f"Building final model with optimal k={optimal_k}")
+    # Target
+    y = df["Sleep_Quality"].values
 
-    # Train final model with optimal k
-    final_kmeans = KMeans(n_clusters=optimal_k, **kmeans_kwargs)
-    final_kmeans.fit(df)
+    # Train Random Forest
+    rf = RandomForestRegressor(
+        n_estimators=300,
+        random_state=42,
+        n_jobs=-1
+    )
+    rf.fit(X_scaled, y)
 
-    # Save the final optimized model
+    # Save BOTH model + scaler used in preprocessing
+    # (We reload and refit the scaler exactly like your preprocessing did, to keep consistency)
+    clustering_data = df[["Sleep_Duration", "Caffeine_Intake", "Screen_Time", "Physical_Activity"]]
+    scaler = MinMaxScaler()
+    scaler.fit(clustering_data)
+
     output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "model")
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, filename)
-    with open(output_path, "wb") as f:
-        pickle.dump(final_kmeans, f)
 
-    print(f"Model saved with {optimal_k} clusters")
-    return sse  # list is JSON-safe
+    with open(output_path, "wb") as f:
+        pickle.dump({"model": rf, "scaler": scaler}, f)
+
+    # Return a list to keep DAG/XCom contract same as your SSE list
+    preds_train = rf.predict(X_scaled)
+    rmse_train = mean_squared_error(y, preds_train, squared=False)
+
+    print(f"RandomForestRegressor saved. Train RMSE: {rmse_train:.4f}")
+    return [float(rmse_train)]
+
 
 
 def load_model_elbow(filename: str, sse: list):
     """
-    Loads the saved model and uses the elbow method to report k.
-    Returns the first prediction (as a plain int) for test.csv.
+    Loads the saved RandomForestRegressor model and predicts Sleep_Quality for test.csv.
+    Keeps the same function name/signature as your original file.
+    Returns the first prediction (float).
     """
-    # load the saved (optimized) model
     output_path = os.path.join(os.path.dirname(__file__), "../model", filename)
-    loaded_model = pickle.load(open(output_path, "rb"))
+    saved = pickle.load(open(output_path, "rb"))
+    loaded_model = saved["model"]
+    scaler = saved["scaler"]
 
-    # elbow for information/logging
-    kl = KneeLocator(range(1, 50), sse, curve="convex", direction="decreasing")
-    print(f"Optimal no. of clusters for sleep patterns: {kl.elbow}")
+    # This list is no longer SSE/elbow, but we keep it for compatibility
+    if sse and len(sse) == 1:
+        print(f"(RF) Train RMSE (from build_save_model): {sse[0]}")
+    else:
+        print("(RF) No SSE/elbow in Random Forest; ignoring elbow logic.")
 
     # predict on test data
     test_df = pd.read_csv(os.path.join(os.path.dirname(__file__), "../data/test.csv"))
-    test_features = test_df[["Sleep_Duration", "Sleep_Quality", "Caffeine_Intake", "Screen_Time", "Physical_Activity"]]
-    
-    # Scale the test features
-    scaler = MinMaxScaler()
-    test_features_scaled = scaler.fit_transform(test_features)
-    
-    predictions = loaded_model.predict(test_features_scaled)
-    
-    print(f"Test students assigned to clusters: {list(predictions)}")
+    test_features = test_df[["Sleep_Duration", "Caffeine_Intake", "Screen_Time", "Physical_Activity"]]
 
-    # Return first prediction
+    # Scale test features using the SAME scaler saved from training
+    test_features_scaled = scaler.transform(test_features)
+
+    predictions = loaded_model.predict(test_features_scaled)
+
+    print(f"Predicted Sleep_Quality for test students: {list(map(float, predictions))}")
+
+    # Return first prediction (keep behavior similar)
     try:
-        return int(predictions[0])
+        return float(predictions[0])
     except Exception:
         return predictions[0].item() if hasattr(predictions[0], "item") else predictions[0]
