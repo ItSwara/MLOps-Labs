@@ -1,0 +1,1272 @@
+[2026-02-13T21:58:26.295+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab1.load_model_task manual__2026-02-13T21:58:20.647610+00:00 [queued]>
+[2026-02-13T21:58:26.298+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab1.load_model_task manual__2026-02-13T21:58:20.647610+00:00 [queued]>
+[2026-02-13T21:58:26.298+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2026-02-13T21:58:26.302+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): load_model_task> on 2026-02-13 21:58:20.647610+00:00
+[2026-02-13T21:58:26.305+0000] {standard_task_runner.py:57} INFO - Started process 3323 to run task
+[2026-02-13T21:58:26.306+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab1', 'load_model_task', 'manual__2026-02-13T21:58:20.647610+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpn32yd6sa']
+[2026-02-13T21:58:26.307+0000] {standard_task_runner.py:85} INFO - Job 24: Subtask load_model_task
+[2026-02-13T21:58:26.323+0000] {task_command.py:415} INFO - Running <TaskInstance: Airflow_Lab1.load_model_task manual__2026-02-13T21:58:20.647610+00:00 [running]> on host 4de003d01bda
+[2026-02-13T21:58:26.351+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swarali Degaonkar' AIRFLOW_CTX_DAG_ID='Airflow_Lab1' AIRFLOW_CTX_TASK_ID='load_model_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-13T21:58:20.647610+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-13T21:58:20.647610+00:00'
+[2026-02-13T21:58:26.353+0000] {logging_mixin.py:151} INFO - Optimal no. of clusters for sleep patterns: 12
+[2026-02-13T21:58:26.353+0000] {logging_mixin.py:151} INFO - Loaded model has 12 clusters
+[2026-02-13T21:58:26.353+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.353+0000] {logging_mixin.py:151} INFO - CLUSTER ANALYSIS - Sleep Pattern Groups
+[2026-02-13T21:58:26.353+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.371+0000] {logging_mixin.py:151} INFO - 
+Cluster Centers (Scaled 0-1):
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO - --------------------------------------------------------------------------------
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO - 
+Cluster 0 (42 students):
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.781
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.272
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.705
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.686
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.230
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO - 
+Cluster 1 (46 students):
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.631
+[2026-02-13T21:58:26.372+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.826
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.196
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.768
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.407
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO - 
+Cluster 2 (33 students):
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.811
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.680
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.739
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.662
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.824
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO - 
+Cluster 3 (45 students):
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.261
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.753
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.147
+[2026-02-13T21:58:26.373+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.316
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.449
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO - 
+Cluster 4 (54 students):
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.451
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.844
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.800
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.422
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.295
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO - 
+Cluster 5 (39 students):
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.701
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.231
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.133
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.778
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.628
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO - 
+Cluster 6 (38 students):
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.689
+[2026-02-13T21:58:26.374+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.459
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.195
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.207
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.823
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO - 
+Cluster 7 (43 students):
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.161
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.245
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.614
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.657
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.220
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO - 
+Cluster 8 (50 students):
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.165
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.224
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.340
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.395
+[2026-02-13T21:58:26.375+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.702
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO - 
+Cluster 9 (44 students):
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.559
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.134
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.855
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.400
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.707
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO - 
+Cluster 10 (38 students):
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.247
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.749
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.768
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.617
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.808
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO - 
+Cluster 11 (28 students):
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Sleep_Duration      : 0.709
+[2026-02-13T21:58:26.376+0000] {logging_mixin.py:151} INFO -   Sleep_Quality       : 0.302
+[2026-02-13T21:58:26.377+0000] {logging_mixin.py:151} INFO -   Caffeine_Intake     : 0.379
+[2026-02-13T21:58:26.377+0000] {logging_mixin.py:151} INFO -   Screen_Time         : 0.140
+[2026-02-13T21:58:26.377+0000] {logging_mixin.py:151} INFO -   Physical_Activity   : 0.213
+[2026-02-13T21:58:26.377+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.377+0000] {logging_mixin.py:151} INFO - CLUSTER CHARACTERISTICS (Original Values)
+[2026-02-13T21:58:26.377+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.378+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.378+0000] {logging_mixin.py:151} INFO - CLUSTER 0 - 42 students
+[2026-02-13T21:58:26.378+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.378+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  7.91, Min=  6.30, Max=  9.00
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  3.45, Min=  1.00, Max=  7.00
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  3.52, Min=  1.00, Max=  5.00
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  3.06, Min=  2.00, Max=  4.00
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 27.64, Min=  1.00, Max= 56.00
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO -   * POOR SLEEP QUALITY - Low quality despite adequate duration
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO -   * HIGH CAFFEINE CONSUMERS
+[2026-02-13T21:58:26.379+0000] {logging_mixin.py:151} INFO -   * LOW ACTIVITY - Minimal exercise
+[2026-02-13T21:58:26.380+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.380+0000] {logging_mixin.py:151} INFO - CLUSTER 1 - 46 students
+[2026-02-13T21:58:26.380+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.380+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  7.16, Min=  4.40, Max=  9.00
+[2026-02-13T21:58:26.380+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  8.43, Min=  6.00, Max= 10.00
+[2026-02-13T21:58:26.380+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  0.98, Min=  0.00, Max=  3.00
+[2026-02-13T21:58:26.380+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  3.30, Min=  2.30, Max=  4.00
+[2026-02-13T21:58:26.381+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 48.85, Min=  2.00, Max=116.00
+[2026-02-13T21:58:26.381+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.381+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.381+0000] {logging_mixin.py:151} INFO - CLUSTER 2 - 33 students
+[2026-02-13T21:58:26.381+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.382+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  8.05, Min=  6.70, Max=  8.90
+[2026-02-13T21:58:26.382+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  7.12, Min=  3.00, Max= 10.00
+[2026-02-13T21:58:26.382+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  3.70, Min=  2.00, Max=  5.00
+[2026-02-13T21:58:26.382+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  2.98, Min=  1.50, Max=  3.90
+[2026-02-13T21:58:26.382+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 98.88, Min= 46.00, Max=119.00
+[2026-02-13T21:58:26.382+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO -   * HEALTHY SLEEPERS - Good sleep duration and quality
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO -   * HIGH CAFFEINE CONSUMERS
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO -   * HIGHLY ACTIVE - Good physical activity
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO - CLUSTER 3 - 45 students
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  5.30, Min=  4.10, Max=  7.60
+[2026-02-13T21:58:26.383+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  7.78, Min=  5.00, Max= 10.00
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  0.73, Min=  0.00, Max=  2.00
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  1.95, Min=  1.00, Max=  3.30
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 53.82, Min=  2.00, Max=114.00
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO -   * SLEEP DEPRIVED - Short sleep duration
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO - CLUSTER 4 - 54 students
+[2026-02-13T21:58:26.384+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.385+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  6.25, Min=  4.10, Max=  8.90
+[2026-02-13T21:58:26.385+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  8.59, Min=  6.00, Max= 10.00
+[2026-02-13T21:58:26.385+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  4.00, Min=  2.00, Max=  5.00
+[2026-02-13T21:58:26.385+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  2.27, Min=  1.00, Max=  3.70
+[2026-02-13T21:58:26.385+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 35.37, Min=  0.00, Max= 76.00
+[2026-02-13T21:58:26.385+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.385+0000] {logging_mixin.py:151} INFO -   * HIGH CAFFEINE CONSUMERS
+[2026-02-13T21:58:26.386+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.386+0000] {logging_mixin.py:151} INFO - CLUSTER 5 - 39 students
+[2026-02-13T21:58:26.386+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.386+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  7.51, Min=  5.00, Max=  9.00
+[2026-02-13T21:58:26.386+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  3.08, Min=  1.00, Max=  6.00
+[2026-02-13T21:58:26.386+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  0.67, Min=  0.00, Max=  2.00
+[2026-02-13T21:58:26.386+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  3.33, Min=  2.20, Max=  4.00
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 75.36, Min= 20.00, Max=119.00
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO -   * POOR SLEEP QUALITY - Low quality despite adequate duration
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO -   * HIGHLY ACTIVE - Good physical activity
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO - CLUSTER 6 - 38 students
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.387+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  7.45, Min=  5.70, Max=  8.80
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  5.13, Min=  1.00, Max= 10.00
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  0.97, Min=  0.00, Max=  3.00
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  1.62, Min=  1.00, Max=  2.60
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 98.71, Min= 67.00, Max=120.00
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO -   * HIGHLY ACTIVE - Good physical activity
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.388+0000] {logging_mixin.py:151} INFO - CLUSTER 7 - 43 students
+[2026-02-13T21:58:26.389+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.389+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  4.81, Min=  4.00, Max=  6.20
+[2026-02-13T21:58:26.389+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  3.21, Min=  1.00, Max=  7.00
+[2026-02-13T21:58:26.389+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  3.07, Min=  0.00, Max=  5.00
+[2026-02-13T21:58:26.389+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  2.97, Min=  1.60, Max=  4.00
+[2026-02-13T21:58:26.389+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 26.40, Min=  3.00, Max= 64.00
+[2026-02-13T21:58:26.389+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO -   * SLEEP DEPRIVED - Short sleep duration
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO -   * HIGH CAFFEINE CONSUMERS
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO -   * LOW ACTIVITY - Minimal exercise
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO - CLUSTER 8 - 50 students
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  4.82, Min=  4.00, Max=  6.70
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  3.02, Min=  1.00, Max=  6.00
+[2026-02-13T21:58:26.390+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  1.70, Min=  0.00, Max=  3.00
+[2026-02-13T21:58:26.391+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  2.19, Min=  1.10, Max=  3.60
+[2026-02-13T21:58:26.391+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 84.24, Min= 39.00, Max=120.00
+[2026-02-13T21:58:26.391+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.391+0000] {logging_mixin.py:151} INFO -   * SLEEP DEPRIVED - Short sleep duration
+[2026-02-13T21:58:26.391+0000] {logging_mixin.py:151} INFO -   * HIGHLY ACTIVE - Good physical activity
+[2026-02-13T21:58:26.391+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.391+0000] {logging_mixin.py:151} INFO - CLUSTER 9 - 44 students
+[2026-02-13T21:58:26.392+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.392+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  6.79, Min=  4.20, Max=  8.90
+[2026-02-13T21:58:26.393+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  2.20, Min=  1.00, Max=  6.00
+[2026-02-13T21:58:26.393+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  4.27, Min=  3.00, Max=  5.00
+[2026-02-13T21:58:26.393+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  2.20, Min=  1.00, Max=  3.50
+[2026-02-13T21:58:26.394+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 84.80, Min= 36.00, Max=119.00
+[2026-02-13T21:58:26.394+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.394+0000] {logging_mixin.py:151} INFO -   * POOR SLEEP QUALITY - Low quality despite adequate duration
+[2026-02-13T21:58:26.395+0000] {logging_mixin.py:151} INFO -   * HIGH CAFFEINE CONSUMERS
+[2026-02-13T21:58:26.395+0000] {logging_mixin.py:151} INFO -   * HIGHLY ACTIVE - Good physical activity
+[2026-02-13T21:58:26.395+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.395+0000] {logging_mixin.py:151} INFO - CLUSTER 10 - 38 students
+[2026-02-13T21:58:26.396+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.396+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  5.24, Min=  4.20, Max=  6.50
+[2026-02-13T21:58:26.396+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  7.74, Min=  4.00, Max= 10.00
+[2026-02-13T21:58:26.397+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  3.84, Min=  1.00, Max=  5.00
+[2026-02-13T21:58:26.397+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  2.85, Min=  1.20, Max=  4.00
+[2026-02-13T21:58:26.397+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 97.00, Min= 62.00, Max=120.00
+[2026-02-13T21:58:26.398+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.398+0000] {logging_mixin.py:151} INFO -   * SLEEP DEPRIVED - Short sleep duration
+[2026-02-13T21:58:26.399+0000] {logging_mixin.py:151} INFO -   * HIGH CAFFEINE CONSUMERS
+[2026-02-13T21:58:26.399+0000] {logging_mixin.py:151} INFO -   * HIGHLY ACTIVE - Good physical activity
+[2026-02-13T21:58:26.399+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.399+0000] {logging_mixin.py:151} INFO - CLUSTER 11 - 28 students
+[2026-02-13T21:58:26.399+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.399+0000] {logging_mixin.py:151} INFO - Sleep_Duration      : Mean=  7.54, Min=  5.40, Max=  9.00
+[2026-02-13T21:58:26.399+0000] {logging_mixin.py:151} INFO - Sleep_Quality       : Mean=  3.71, Min=  1.00, Max=  7.00
+[2026-02-13T21:58:26.400+0000] {logging_mixin.py:151} INFO - Caffeine_Intake     : Mean=  1.89, Min=  0.00, Max=  4.00
+[2026-02-13T21:58:26.400+0000] {logging_mixin.py:151} INFO - Screen_Time         : Mean=  1.42, Min=  1.00, Max=  2.30
+[2026-02-13T21:58:26.400+0000] {logging_mixin.py:151} INFO - Physical_Activity   : Mean= 25.50, Min=  0.00, Max= 47.00
+[2026-02-13T21:58:26.400+0000] {logging_mixin.py:151} INFO - 
+Interpretation:
+[2026-02-13T21:58:26.400+0000] {logging_mixin.py:151} INFO -   * POOR SLEEP QUALITY - Low quality despite adequate duration
+[2026-02-13T21:58:26.400+0000] {logging_mixin.py:151} INFO -   * LOW ACTIVITY - Minimal exercise
+[2026-02-13T21:58:26.400+0000] {logging_mixin.py:151} INFO - 
+================================================================================
+[2026-02-13T21:58:26.404+0000] {logging_mixin.py:151} INFO - 
+TEST STUDENT PREDICTIONS:
+[2026-02-13T21:58:26.404+0000] {logging_mixin.py:151} INFO - --------------------------------------------------------------------------------
+[2026-02-13T21:58:26.404+0000] {logging_mixin.py:151} INFO - Student 1: Assigned to Cluster 1
+[2026-02-13T21:58:26.404+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 10/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.404+0000] {logging_mixin.py:151} INFO - Student 2: Assigned to Cluster 9
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.3h, Quality: 2/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO - Student 3: Assigned to Cluster 7
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 5/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO - Student 4: Assigned to Cluster 4
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.3h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO - Student 5: Assigned to Cluster 8
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO - Student 6: Assigned to Cluster 10
+[2026-02-13T21:58:26.405+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 9/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO - Student 7: Assigned to Cluster 5
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO - Student 8: Assigned to Cluster 5
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO - Student 9: Assigned to Cluster 6
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO - Student 10: Assigned to Cluster 4
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 8/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.406+0000] {logging_mixin.py:151} INFO - Student 11: Assigned to Cluster 2
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.9h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO - Student 12: Assigned to Cluster 11
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO - Student 13: Assigned to Cluster 7
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO - Student 14: Assigned to Cluster 6
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO - Student 15: Assigned to Cluster 4
+[2026-02-13T21:58:26.407+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO - Student 16: Assigned to Cluster 0
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO - Student 17: Assigned to Cluster 7
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 7/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO - Student 18: Assigned to Cluster 4
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO - Student 19: Assigned to Cluster 3
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 10/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.408+0000] {logging_mixin.py:151} INFO - Student 20: Assigned to Cluster 11
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 9.0h, Quality: 2/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO - Student 21: Assigned to Cluster 1
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 9/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO - Student 22: Assigned to Cluster 5
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 1/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO - Student 23: Assigned to Cluster 3
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 10/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.409+0000] {logging_mixin.py:151} INFO - Student 24: Assigned to Cluster 1
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO - Student 25: Assigned to Cluster 1
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO - Student 26: Assigned to Cluster 9
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.5h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO - Student 27: Assigned to Cluster 5
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 4/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO - Student 28: Assigned to Cluster 8
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.410+0000] {logging_mixin.py:151} INFO - Student 29: Assigned to Cluster 3
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO - Student 30: Assigned to Cluster 6
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO - Student 31: Assigned to Cluster 0
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO - Student 32: Assigned to Cluster 10
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.411+0000] {logging_mixin.py:151} INFO - Student 33: Assigned to Cluster 5
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 1/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO - Student 34: Assigned to Cluster 0
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.3h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO - Student 35: Assigned to Cluster 3
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.6h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO - Student 36: Assigned to Cluster 7
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.2h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO - Student 37: Assigned to Cluster 10
+[2026-02-13T21:58:26.412+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO - Student 38: Assigned to Cluster 5
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO - Student 39: Assigned to Cluster 3
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO - Student 40: Assigned to Cluster 4
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 8/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO - Student 41: Assigned to Cluster 11
+[2026-02-13T21:58:26.413+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO - Student 42: Assigned to Cluster 2
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 8/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO - Student 43: Assigned to Cluster 4
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.9h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO - Student 44: Assigned to Cluster 3
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO - Student 45: Assigned to Cluster 9
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.414+0000] {logging_mixin.py:151} INFO - Student 46: Assigned to Cluster 1
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO - Student 47: Assigned to Cluster 4
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO - Student 48: Assigned to Cluster 10
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO - Student 49: Assigned to Cluster 1
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.6h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO - Student 50: Assigned to Cluster 0
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.415+0000] {logging_mixin.py:151} INFO - Student 51: Assigned to Cluster 8
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 2/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO - Student 52: Assigned to Cluster 3
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO - Student 53: Assigned to Cluster 3
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO - Student 54: Assigned to Cluster 0
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO - Student 55: Assigned to Cluster 7
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.416+0000] {logging_mixin.py:151} INFO - Student 56: Assigned to Cluster 7
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO - Student 57: Assigned to Cluster 11
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO - Student 58: Assigned to Cluster 3
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO - Student 59: Assigned to Cluster 9
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.417+0000] {logging_mixin.py:151} INFO - Student 60: Assigned to Cluster 8
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 1/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO - Student 61: Assigned to Cluster 7
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO - Student 62: Assigned to Cluster 7
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO - Student 63: Assigned to Cluster 9
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.6h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO - Student 64: Assigned to Cluster 6
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.418+0000] {logging_mixin.py:151} INFO - Student 65: Assigned to Cluster 5
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.2h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO - Student 66: Assigned to Cluster 3
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 10/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO - Student 67: Assigned to Cluster 0
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO - Student 68: Assigned to Cluster 7
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 4/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO - Student 69: Assigned to Cluster 9
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.5h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.419+0000] {logging_mixin.py:151} INFO - Student 70: Assigned to Cluster 9
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.5h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO - Student 71: Assigned to Cluster 8
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO - Student 72: Assigned to Cluster 8
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO - Student 73: Assigned to Cluster 7
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO - Student 74: Assigned to Cluster 3
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 8/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.420+0000] {logging_mixin.py:151} INFO - Student 75: Assigned to Cluster 10
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO - Student 76: Assigned to Cluster 11
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.9h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO - Student 77: Assigned to Cluster 7
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO - Student 78: Assigned to Cluster 4
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.5h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO - Student 79: Assigned to Cluster 5
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.421+0000] {logging_mixin.py:151} INFO - Student 80: Assigned to Cluster 10
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 8/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO - Student 81: Assigned to Cluster 8
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO - Student 82: Assigned to Cluster 4
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.9h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO - Student 83: Assigned to Cluster 3
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO - Student 84: Assigned to Cluster 7
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.422+0000] {logging_mixin.py:151} INFO - Student 85: Assigned to Cluster 5
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO - Student 86: Assigned to Cluster 4
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 8/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO - Student 87: Assigned to Cluster 0
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO - Student 88: Assigned to Cluster 5
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.2h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO - Student 89: Assigned to Cluster 7
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.5h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.423+0000] {logging_mixin.py:151} INFO - Student 90: Assigned to Cluster 5
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO - Student 91: Assigned to Cluster 6
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO - Student 92: Assigned to Cluster 3
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO - Student 93: Assigned to Cluster 0
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 3/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO - Student 94: Assigned to Cluster 11
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO - Student 95: Assigned to Cluster 4
+[2026-02-13T21:58:26.424+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.5h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO - Student 96: Assigned to Cluster 6
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO - Student 97: Assigned to Cluster 5
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO - Student 98: Assigned to Cluster 8
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 4/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO - Student 99: Assigned to Cluster 4
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO - Student 100: Assigned to Cluster 0
+[2026-02-13T21:58:26.425+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 2/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO - Student 101: Assigned to Cluster 4
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO - Student 102: Assigned to Cluster 3
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO - Student 103: Assigned to Cluster 7
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO - Student 104: Assigned to Cluster 2
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.2h, Quality: 9/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO - Student 105: Assigned to Cluster 0
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.426+0000] {logging_mixin.py:151} INFO - Student 106: Assigned to Cluster 4
+[2026-02-13T21:58:26.427+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.6h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.427+0000] {logging_mixin.py:151} INFO - Student 107: Assigned to Cluster 3
+[2026-02-13T21:58:26.427+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.427+0000] {logging_mixin.py:151} INFO - Student 108: Assigned to Cluster 10
+[2026-02-13T21:58:26.427+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 8/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.427+0000] {logging_mixin.py:151} INFO - Student 109: Assigned to Cluster 3
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO - Student 110: Assigned to Cluster 2
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO - Student 111: Assigned to Cluster 8
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.6h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO - Student 112: Assigned to Cluster 6
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.9h, Quality: 7/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.428+0000] {logging_mixin.py:151} INFO - Student 113: Assigned to Cluster 11
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO - Student 114: Assigned to Cluster 9
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 3/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO - Student 115: Assigned to Cluster 5
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO - Student 116: Assigned to Cluster 5
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 4/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO - Student 117: Assigned to Cluster 1
+[2026-02-13T21:58:26.429+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO - Student 118: Assigned to Cluster 7
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO - Student 119: Assigned to Cluster 9
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO - Student 120: Assigned to Cluster 11
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.5h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO - Student 121: Assigned to Cluster 2
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 5/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.430+0000] {logging_mixin.py:151} INFO - Student 122: Assigned to Cluster 9
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO - Student 123: Assigned to Cluster 9
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO - Student 124: Assigned to Cluster 6
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO - Student 125: Assigned to Cluster 8
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 5/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.431+0000] {logging_mixin.py:151} INFO - Student 126: Assigned to Cluster 1
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO - Student 127: Assigned to Cluster 10
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 5/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO - Student 128: Assigned to Cluster 1
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.9h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO - Student 129: Assigned to Cluster 4
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.6h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO - Student 130: Assigned to Cluster 9
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.432+0000] {logging_mixin.py:151} INFO - Student 131: Assigned to Cluster 8
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO - Student 132: Assigned to Cluster 1
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO - Student 133: Assigned to Cluster 8
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO - Student 134: Assigned to Cluster 4
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO - Student 135: Assigned to Cluster 10
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 5/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.433+0000] {logging_mixin.py:151} INFO - Student 136: Assigned to Cluster 8
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.9h, Quality: 2/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO - Student 137: Assigned to Cluster 3
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 7/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO - Student 138: Assigned to Cluster 9
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO - Student 139: Assigned to Cluster 9
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.6h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO - Student 140: Assigned to Cluster 8
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.5h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.434+0000] {logging_mixin.py:151} INFO - Student 141: Assigned to Cluster 11
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO - Student 142: Assigned to Cluster 6
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO - Student 143: Assigned to Cluster 11
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 7/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO - Student 144: Assigned to Cluster 1
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO - Student 145: Assigned to Cluster 9
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 3/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.435+0000] {logging_mixin.py:151} INFO - Student 146: Assigned to Cluster 7
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO - Student 147: Assigned to Cluster 10
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO - Student 148: Assigned to Cluster 7
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 4/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO - Student 149: Assigned to Cluster 4
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 8/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO - Student 150: Assigned to Cluster 8
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 2/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO - Student 151: Assigned to Cluster 10
+[2026-02-13T21:58:26.436+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO - Student 152: Assigned to Cluster 1
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO - Student 153: Assigned to Cluster 4
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO - Student 154: Assigned to Cluster 4
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO - Student 155: Assigned to Cluster 3
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 10/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO - Student 156: Assigned to Cluster 4
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.437+0000] {logging_mixin.py:151} INFO - Student 157: Assigned to Cluster 11
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.6h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO - Student 158: Assigned to Cluster 6
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO - Student 159: Assigned to Cluster 0
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO - Student 160: Assigned to Cluster 4
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.2h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO - Student 161: Assigned to Cluster 8
+[2026-02-13T21:58:26.438+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO - Student 162: Assigned to Cluster 2
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 9/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO - Student 163: Assigned to Cluster 5
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO - Student 164: Assigned to Cluster 6
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 2/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO - Student 165: Assigned to Cluster 4
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.439+0000] {logging_mixin.py:151} INFO - Student 166: Assigned to Cluster 11
+[2026-02-13T21:58:26.440+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 4/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.440+0000] {logging_mixin.py:151} INFO - Student 167: Assigned to Cluster 1
+[2026-02-13T21:58:26.440+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.440+0000] {logging_mixin.py:151} INFO - Student 168: Assigned to Cluster 7
+[2026-02-13T21:58:26.440+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.441+0000] {logging_mixin.py:151} INFO - Student 169: Assigned to Cluster 0
+[2026-02-13T21:58:26.441+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.441+0000] {logging_mixin.py:151} INFO - Student 170: Assigned to Cluster 3
+[2026-02-13T21:58:26.441+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 7/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.441+0000] {logging_mixin.py:151} INFO - Student 171: Assigned to Cluster 11
+[2026-02-13T21:58:26.441+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.442+0000] {logging_mixin.py:151} INFO - Student 172: Assigned to Cluster 4
+[2026-02-13T21:58:26.442+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.2h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.442+0000] {logging_mixin.py:151} INFO - Student 173: Assigned to Cluster 8
+[2026-02-13T21:58:26.442+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 2/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.442+0000] {logging_mixin.py:151} INFO - Student 174: Assigned to Cluster 4
+[2026-02-13T21:58:26.442+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.442+0000] {logging_mixin.py:151} INFO - Student 175: Assigned to Cluster 2
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO - Student 176: Assigned to Cluster 6
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 2/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO - Student 177: Assigned to Cluster 6
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO - Student 178: Assigned to Cluster 2
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO - Student 179: Assigned to Cluster 11
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.443+0000] {logging_mixin.py:151} INFO - Student 180: Assigned to Cluster 2
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.2h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO - Student 181: Assigned to Cluster 10
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO - Student 182: Assigned to Cluster 4
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO - Student 183: Assigned to Cluster 3
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 7/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO - Student 184: Assigned to Cluster 11
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.444+0000] {logging_mixin.py:151} INFO - Student 185: Assigned to Cluster 5
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO - Student 186: Assigned to Cluster 3
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO - Student 187: Assigned to Cluster 6
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO - Student 188: Assigned to Cluster 0
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 4/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO - Student 189: Assigned to Cluster 8
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.445+0000] {logging_mixin.py:151} INFO - Student 190: Assigned to Cluster 5
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO - Student 191: Assigned to Cluster 11
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO - Student 192: Assigned to Cluster 7
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO - Student 193: Assigned to Cluster 2
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 5/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO - Student 194: Assigned to Cluster 7
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.5h, Quality: 2/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.446+0000] {logging_mixin.py:151} INFO - Student 195: Assigned to Cluster 2
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO - Student 196: Assigned to Cluster 11
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO - Student 197: Assigned to Cluster 6
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO - Student 198: Assigned to Cluster 10
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.447+0000] {logging_mixin.py:151} INFO - Student 199: Assigned to Cluster 1
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO - Student 200: Assigned to Cluster 5
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.2h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO - Student 201: Assigned to Cluster 4
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.6h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO - Student 202: Assigned to Cluster 2
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO - Student 203: Assigned to Cluster 8
+[2026-02-13T21:58:26.448+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO - Student 204: Assigned to Cluster 9
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO - Student 205: Assigned to Cluster 8
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO - Student 206: Assigned to Cluster 7
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.6h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO - Student 207: Assigned to Cluster 7
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.449+0000] {logging_mixin.py:151} INFO - Student 208: Assigned to Cluster 4
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 10/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO - Student 209: Assigned to Cluster 4
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO - Student 210: Assigned to Cluster 6
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.6h, Quality: 10/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO - Student 211: Assigned to Cluster 7
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.450+0000] {logging_mixin.py:151} INFO - Student 212: Assigned to Cluster 10
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.6h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO - Student 213: Assigned to Cluster 5
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 3/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO - Student 214: Assigned to Cluster 0
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 5/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO - Student 215: Assigned to Cluster 3
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.6h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO - Student 216: Assigned to Cluster 6
+[2026-02-13T21:58:26.451+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO - Student 217: Assigned to Cluster 0
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO - Student 218: Assigned to Cluster 0
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO - Student 219: Assigned to Cluster 4
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO - Student 220: Assigned to Cluster 8
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO - Student 221: Assigned to Cluster 9
+[2026-02-13T21:58:26.452+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO - Student 222: Assigned to Cluster 8
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 4/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO - Student 223: Assigned to Cluster 2
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO - Student 224: Assigned to Cluster 9
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.6h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO - Student 225: Assigned to Cluster 4
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 9/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO - Student 226: Assigned to Cluster 0
+[2026-02-13T21:58:26.453+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.454+0000] {logging_mixin.py:151} INFO - Student 227: Assigned to Cluster 5
+[2026-02-13T21:58:26.454+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 9.0h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.454+0000] {logging_mixin.py:151} INFO - Student 228: Assigned to Cluster 9
+[2026-02-13T21:58:26.454+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.454+0000] {logging_mixin.py:151} INFO - Student 229: Assigned to Cluster 1
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 10/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO - Student 230: Assigned to Cluster 8
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO - Student 231: Assigned to Cluster 4
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 9/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO - Student 232: Assigned to Cluster 2
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO - Student 233: Assigned to Cluster 11
+[2026-02-13T21:58:26.455+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.456+0000] {logging_mixin.py:151} INFO - Student 234: Assigned to Cluster 0
+[2026-02-13T21:58:26.456+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.456+0000] {logging_mixin.py:151} INFO - Student 235: Assigned to Cluster 9
+[2026-02-13T21:58:26.456+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.456+0000] {logging_mixin.py:151} INFO - Student 236: Assigned to Cluster 10
+[2026-02-13T21:58:26.456+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO - Student 237: Assigned to Cluster 8
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO - Student 238: Assigned to Cluster 0
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO - Student 239: Assigned to Cluster 9
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO - Student 240: Assigned to Cluster 8
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.6h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO - Student 241: Assigned to Cluster 8
+[2026-02-13T21:58:26.457+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 4/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO - Student 242: Assigned to Cluster 3
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO - Student 243: Assigned to Cluster 4
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.5h, Quality: 9/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO - Student 244: Assigned to Cluster 7
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO - Student 245: Assigned to Cluster 10
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 9/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.458+0000] {logging_mixin.py:151} INFO - Student 246: Assigned to Cluster 4
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO - Student 247: Assigned to Cluster 5
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO - Student 248: Assigned to Cluster 1
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 8/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO - Student 249: Assigned to Cluster 11
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.9h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO - Student 250: Assigned to Cluster 1
+[2026-02-13T21:58:26.459+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.460+0000] {logging_mixin.py:151} INFO - Student 251: Assigned to Cluster 10
+[2026-02-13T21:58:26.460+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 9/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.460+0000] {logging_mixin.py:151} INFO - Student 252: Assigned to Cluster 2
+[2026-02-13T21:58:26.460+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.460+0000] {logging_mixin.py:151} INFO - Student 253: Assigned to Cluster 11
+[2026-02-13T21:58:26.460+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 2/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.460+0000] {logging_mixin.py:151} INFO - Student 254: Assigned to Cluster 9
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO - Student 255: Assigned to Cluster 3
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 8/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO - Student 256: Assigned to Cluster 2
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 7/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO - Student 257: Assigned to Cluster 9
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO - Student 258: Assigned to Cluster 8
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.3h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.461+0000] {logging_mixin.py:151} INFO - Student 259: Assigned to Cluster 6
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 7/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO - Student 260: Assigned to Cluster 10
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO - Student 261: Assigned to Cluster 0
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 9.0h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO - Student 262: Assigned to Cluster 10
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO - Student 263: Assigned to Cluster 5
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.462+0000] {logging_mixin.py:151} INFO - Student 264: Assigned to Cluster 0
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO - Student 265: Assigned to Cluster 3
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 8/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO - Student 266: Assigned to Cluster 5
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.6h, Quality: 2/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO - Student 267: Assigned to Cluster 8
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO - Student 268: Assigned to Cluster 10
+[2026-02-13T21:58:26.463+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO - Student 269: Assigned to Cluster 9
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO - Student 270: Assigned to Cluster 8
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO - Student 271: Assigned to Cluster 1
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO - Student 272: Assigned to Cluster 4
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO - Student 273: Assigned to Cluster 7
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.464+0000] {logging_mixin.py:151} INFO - Student 274: Assigned to Cluster 2
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO - Student 275: Assigned to Cluster 9
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO - Student 276: Assigned to Cluster 0
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO - Student 277: Assigned to Cluster 1
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 9.0h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO - Student 278: Assigned to Cluster 8
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.465+0000] {logging_mixin.py:151} INFO - Student 279: Assigned to Cluster 4
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO - Student 280: Assigned to Cluster 5
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO - Student 281: Assigned to Cluster 11
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO - Student 282: Assigned to Cluster 1
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 7/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO - Student 283: Assigned to Cluster 6
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.466+0000] {logging_mixin.py:151} INFO - Student 284: Assigned to Cluster 3
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 8/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO - Student 285: Assigned to Cluster 7
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 3/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO - Student 286: Assigned to Cluster 2
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 10/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO - Student 287: Assigned to Cluster 0
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO - Student 288: Assigned to Cluster 4
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.9h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.467+0000] {logging_mixin.py:151} INFO - Student 289: Assigned to Cluster 10
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO - Student 290: Assigned to Cluster 4
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 9/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO - Student 291: Assigned to Cluster 10
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO - Student 292: Assigned to Cluster 8
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.6h, Quality: 1/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO - Student 293: Assigned to Cluster 9
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.468+0000] {logging_mixin.py:151} INFO - Student 294: Assigned to Cluster 2
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO - Student 295: Assigned to Cluster 2
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 5/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO - Student 296: Assigned to Cluster 1
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO - Student 297: Assigned to Cluster 5
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO - Student 298: Assigned to Cluster 4
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 8/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.469+0000] {logging_mixin.py:151} INFO - Student 299: Assigned to Cluster 8
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO - Student 300: Assigned to Cluster 8
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 2/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO - Student 301: Assigned to Cluster 10
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.9h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO - Student 302: Assigned to Cluster 10
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO - Student 303: Assigned to Cluster 2
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.6h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.470+0000] {logging_mixin.py:151} INFO - Student 304: Assigned to Cluster 6
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 8/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO - Student 305: Assigned to Cluster 8
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 4/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO - Student 306: Assigned to Cluster 8
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO - Student 307: Assigned to Cluster 0
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 5/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO - Student 308: Assigned to Cluster 7
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 2/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.471+0000] {logging_mixin.py:151} INFO - Student 309: Assigned to Cluster 9
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 2/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO - Student 310: Assigned to Cluster 1
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO - Student 311: Assigned to Cluster 3
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 10/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO - Student 312: Assigned to Cluster 1
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO - Student 313: Assigned to Cluster 5
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 4/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO - Student 314: Assigned to Cluster 3
+[2026-02-13T21:58:26.472+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO - Student 315: Assigned to Cluster 4
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO - Student 316: Assigned to Cluster 11
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO - Student 317: Assigned to Cluster 3
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO - Student 318: Assigned to Cluster 2
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 4/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO - Student 319: Assigned to Cluster 5
+[2026-02-13T21:58:26.473+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.474+0000] {logging_mixin.py:151} INFO - Student 320: Assigned to Cluster 2
+[2026-02-13T21:58:26.474+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.474+0000] {logging_mixin.py:151} INFO - Student 321: Assigned to Cluster 5
+[2026-02-13T21:58:26.474+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.474+0000] {logging_mixin.py:151} INFO - Student 322: Assigned to Cluster 0
+[2026-02-13T21:58:26.474+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.474+0000] {logging_mixin.py:151} INFO - Student 323: Assigned to Cluster 9
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO - Student 324: Assigned to Cluster 4
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.2h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO - Student 325: Assigned to Cluster 9
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO - Student 326: Assigned to Cluster 1
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO - Student 327: Assigned to Cluster 6
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.475+0000] {logging_mixin.py:151} INFO - Student 328: Assigned to Cluster 11
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 5/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO - Student 329: Assigned to Cluster 8
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO - Student 330: Assigned to Cluster 6
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 1/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO - Student 331: Assigned to Cluster 1
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 10/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO - Student 332: Assigned to Cluster 8
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.476+0000] {logging_mixin.py:151} INFO - Student 333: Assigned to Cluster 0
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 2/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO - Student 334: Assigned to Cluster 4
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.6h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO - Student 335: Assigned to Cluster 7
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO - Student 336: Assigned to Cluster 2
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO - Student 337: Assigned to Cluster 7
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 3/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.477+0000] {logging_mixin.py:151} INFO - Student 338: Assigned to Cluster 5
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO - Student 339: Assigned to Cluster 5
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.2h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO - Student 340: Assigned to Cluster 6
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO - Student 341: Assigned to Cluster 7
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.0h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO - Student 342: Assigned to Cluster 7
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 4/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.478+0000] {logging_mixin.py:151} INFO - Student 343: Assigned to Cluster 2
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO - Student 344: Assigned to Cluster 4
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO - Student 345: Assigned to Cluster 11
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO - Student 346: Assigned to Cluster 10
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO - Student 347: Assigned to Cluster 9
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 5/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.479+0000] {logging_mixin.py:151} INFO - Student 348: Assigned to Cluster 1
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 10/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO - Student 349: Assigned to Cluster 6
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO - Student 350: Assigned to Cluster 10
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 8/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO - Student 351: Assigned to Cluster 1
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO - Student 352: Assigned to Cluster 1
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 7/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.480+0000] {logging_mixin.py:151} INFO - Student 353: Assigned to Cluster 6
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO - Student 354: Assigned to Cluster 6
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO - Student 355: Assigned to Cluster 11
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 4/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO - Student 356: Assigned to Cluster 2
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO - Student 357: Assigned to Cluster 8
+[2026-02-13T21:58:26.481+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO - Student 358: Assigned to Cluster 1
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 10/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO - Student 359: Assigned to Cluster 1
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 10/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO - Student 360: Assigned to Cluster 3
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO - Student 361: Assigned to Cluster 9
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.5h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.482+0000] {logging_mixin.py:151} INFO - Student 362: Assigned to Cluster 0
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO - Student 363: Assigned to Cluster 3
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 5/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO - Student 364: Assigned to Cluster 1
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.9h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO - Student 365: Assigned to Cluster 10
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO - Student 366: Assigned to Cluster 9
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 3/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.483+0000] {logging_mixin.py:151} INFO - Student 367: Assigned to Cluster 8
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 3/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO - Student 368: Assigned to Cluster 4
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO - Student 369: Assigned to Cluster 2
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO - Student 370: Assigned to Cluster 2
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO - Student 371: Assigned to Cluster 5
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.484+0000] {logging_mixin.py:151} INFO - Student 372: Assigned to Cluster 3
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO - Student 373: Assigned to Cluster 1
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 10/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO - Student 374: Assigned to Cluster 4
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO - Student 375: Assigned to Cluster 7
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO - Student 376: Assigned to Cluster 4
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.6h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.485+0000] {logging_mixin.py:151} INFO - Student 377: Assigned to Cluster 9
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO - Student 378: Assigned to Cluster 1
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO - Student 379: Assigned to Cluster 2
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO - Student 380: Assigned to Cluster 1
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.2h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO - Student 381: Assigned to Cluster 3
+[2026-02-13T21:58:26.486+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO - Student 382: Assigned to Cluster 1
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 9.0h, Quality: 7/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO - Student 383: Assigned to Cluster 9
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO - Student 384: Assigned to Cluster 1
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.3h, Quality: 7/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO - Student 385: Assigned to Cluster 9
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO - Student 386: Assigned to Cluster 1
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.487+0000] {logging_mixin.py:151} INFO - Student 387: Assigned to Cluster 1
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 8/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO - Student 388: Assigned to Cluster 7
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 5/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO - Student 389: Assigned to Cluster 7
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 2/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO - Student 390: Assigned to Cluster 6
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 5/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO - Student 391: Assigned to Cluster 2
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.488+0000] {logging_mixin.py:151} INFO - Student 392: Assigned to Cluster 8
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 2/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO - Student 393: Assigned to Cluster 0
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO - Student 394: Assigned to Cluster 8
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO - Student 395: Assigned to Cluster 9
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.2h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO - Student 396: Assigned to Cluster 9
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.489+0000] {logging_mixin.py:151} INFO - Student 397: Assigned to Cluster 4
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.1h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO - Student 398: Assigned to Cluster 9
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO - Student 399: Assigned to Cluster 4
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO - Student 400: Assigned to Cluster 4
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.4h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO - Student 401: Assigned to Cluster 9
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.490+0000] {logging_mixin.py:151} INFO - Student 402: Assigned to Cluster 9
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 4/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO - Student 403: Assigned to Cluster 0
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.5h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO - Student 404: Assigned to Cluster 3
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO - Student 405: Assigned to Cluster 4
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.491+0000] {logging_mixin.py:151} INFO - Student 406: Assigned to Cluster 10
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 7/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO - Student 407: Assigned to Cluster 1
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.3h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO - Student 408: Assigned to Cluster 3
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO - Student 409: Assigned to Cluster 5
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 3/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO - Student 410: Assigned to Cluster 6
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.492+0000] {logging_mixin.py:151} INFO - Student 411: Assigned to Cluster 6
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.8h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO - Student 412: Assigned to Cluster 4
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 8/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO - Student 413: Assigned to Cluster 1
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO - Student 414: Assigned to Cluster 11
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO - Student 415: Assigned to Cluster 5
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.493+0000] {logging_mixin.py:151} INFO - Student 416: Assigned to Cluster 5
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.2h, Quality: 3/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO - Student 417: Assigned to Cluster 0
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.8h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO - Student 418: Assigned to Cluster 1
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 10/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO - Student 419: Assigned to Cluster 3
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 8/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.494+0000] {logging_mixin.py:151} INFO - Student 420: Assigned to Cluster 10
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 10/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO - Student 421: Assigned to Cluster 0
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.6h, Quality: 1/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO - Student 422: Assigned to Cluster 6
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 2/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO - Student 423: Assigned to Cluster 6
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 2/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO - Student 424: Assigned to Cluster 5
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.495+0000] {logging_mixin.py:151} INFO - Student 425: Assigned to Cluster 10
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.6h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO - Student 426: Assigned to Cluster 7
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.6h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO - Student 427: Assigned to Cluster 0
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 2/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO - Student 428: Assigned to Cluster 5
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.2h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO - Student 429: Assigned to Cluster 7
+[2026-02-13T21:58:26.496+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 5/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO - Student 430: Assigned to Cluster 10
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 7/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO - Student 431: Assigned to Cluster 10
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 8/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO - Student 432: Assigned to Cluster 1
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.9h, Quality: 10/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO - Student 433: Assigned to Cluster 5
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.3h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.497+0000] {logging_mixin.py:151} INFO - Student 434: Assigned to Cluster 2
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 7/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO - Student 435: Assigned to Cluster 10
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.6h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO - Student 436: Assigned to Cluster 3
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.3h, Quality: 10/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO - Student 437: Assigned to Cluster 8
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.1h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO - Student 438: Assigned to Cluster 7
+[2026-02-13T21:58:26.498+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 3/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO - Student 439: Assigned to Cluster 10
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 7/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO - Student 440: Assigned to Cluster 4
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO - Student 441: Assigned to Cluster 11
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.0h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO - Student 442: Assigned to Cluster 3
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.5h, Quality: 7/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.499+0000] {logging_mixin.py:151} INFO - Student 443: Assigned to Cluster 6
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO - Student 444: Assigned to Cluster 0
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.3h, Quality: 1/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO - Student 445: Assigned to Cluster 0
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 1/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO - Student 446: Assigned to Cluster 8
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO - Student 447: Assigned to Cluster 10
+[2026-02-13T21:58:26.500+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.4h, Quality: 9/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO - Student 448: Assigned to Cluster 7
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO - Student 449: Assigned to Cluster 7
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 5/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO - Student 450: Assigned to Cluster 2
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 10/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO - Student 451: Assigned to Cluster 3
+[2026-02-13T21:58:26.501+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO - Student 452: Assigned to Cluster 11
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.5h, Quality: 6/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO - Student 453: Assigned to Cluster 3
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.1h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO - Student 454: Assigned to Cluster 2
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 8/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO - Student 455: Assigned to Cluster 1
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.502+0000] {logging_mixin.py:151} INFO - Student 456: Assigned to Cluster 8
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.0h, Quality: 1/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO - Student 457: Assigned to Cluster 3
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.6h, Quality: 9/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO - Student 458: Assigned to Cluster 3
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.6h, Quality: 6/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO - Student 459: Assigned to Cluster 1
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.503+0000] {logging_mixin.py:151} INFO - Student 460: Assigned to Cluster 9
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.8h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO - Student 461: Assigned to Cluster 7
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 3/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO - Student 462: Assigned to Cluster 8
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 6/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO - Student 463: Assigned to Cluster 10
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.0h, Quality: 9/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO - Student 464: Assigned to Cluster 4
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.7h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.504+0000] {logging_mixin.py:151} INFO - Student 465: Assigned to Cluster 6
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.8h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO - Student 466: Assigned to Cluster 9
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.4h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO - Student 467: Assigned to Cluster 6
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO - Student 468: Assigned to Cluster 3
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.0h, Quality: 9/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO - Student 469: Assigned to Cluster 8
+[2026-02-13T21:58:26.505+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO - Student 470: Assigned to Cluster 3
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.5h, Quality: 5/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO - Student 471: Assigned to Cluster 4
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 9/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO - Student 472: Assigned to Cluster 6
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO - Student 473: Assigned to Cluster 7
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.2h, Quality: 2/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.506+0000] {logging_mixin.py:151} INFO - Student 474: Assigned to Cluster 0
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.7h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO - Student 475: Assigned to Cluster 8
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO - Student 476: Assigned to Cluster 6
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 8/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO - Student 477: Assigned to Cluster 0
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.5h, Quality: 6/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO - Student 478: Assigned to Cluster 0
+[2026-02-13T21:58:26.507+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO - Student 479: Assigned to Cluster 3
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.6h, Quality: 9/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO - Student 480: Assigned to Cluster 1
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.0h, Quality: 8/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO - Student 481: Assigned to Cluster 9
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 4/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO - Student 482: Assigned to Cluster 0
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 4/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.508+0000] {logging_mixin.py:151} INFO - Student 483: Assigned to Cluster 10
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 9/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO - Student 484: Assigned to Cluster 5
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.5h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO - Student 485: Assigned to Cluster 8
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.7h, Quality: 2/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO - Student 486: Assigned to Cluster 0
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.1h, Quality: 2/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO - Student 487: Assigned to Cluster 0
+[2026-02-13T21:58:26.509+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.3h, Quality: 6/10, Caffeine: 5 drinks
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO - Student 488: Assigned to Cluster 6
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.2h, Quality: 4/10, Caffeine: 2 drinks
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO - Student 489: Assigned to Cluster 4
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 6.6h, Quality: 10/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO - Student 490: Assigned to Cluster 5
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.7h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO - Student 491: Assigned to Cluster 8
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.4h, Quality: 3/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.510+0000] {logging_mixin.py:151} INFO - Student 492: Assigned to Cluster 8
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.3h, Quality: 3/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO - Student 493: Assigned to Cluster 7
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.2h, Quality: 6/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO - Student 494: Assigned to Cluster 10
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.8h, Quality: 8/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO - Student 495: Assigned to Cluster 0
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.4h, Quality: 7/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.511+0000] {logging_mixin.py:151} INFO - Student 496: Assigned to Cluster 9
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.1h, Quality: 4/10, Caffeine: 4 drinks
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO - Student 497: Assigned to Cluster 0
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 8.9h, Quality: 4/10, Caffeine: 3 drinks
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO - Student 498: Assigned to Cluster 1
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 5.7h, Quality: 10/10, Caffeine: 1 drinks
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO - Student 499: Assigned to Cluster 7
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 4.9h, Quality: 2/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO - Student 500: Assigned to Cluster 6
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO -   Sleep Duration: 7.9h, Quality: 1/10, Caffeine: 0 drinks
+[2026-02-13T21:58:26.512+0000] {logging_mixin.py:151} INFO - ================================================================================
+[2026-02-13T21:58:26.513+0000] {python.py:194} INFO - Done. Returned value was: 1
+[2026-02-13T21:58:26.523+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab1, task_id=load_model_task, execution_date=20260213T215820, start_date=20260213T215826, end_date=20260213T215826
+[2026-02-13T21:58:26.569+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2026-02-13T21:58:26.576+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

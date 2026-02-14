@@ -1,0 +1,17 @@
+[2026-02-13T21:50:55.690+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab1.load_model_task manual__2026-02-13T21:50:49.809242+00:00 [queued]>
+[2026-02-13T21:50:55.693+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab1.load_model_task manual__2026-02-13T21:50:49.809242+00:00 [queued]>
+[2026-02-13T21:50:55.693+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2026-02-13T21:50:55.697+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): load_model_task> on 2026-02-13 21:50:49.809242+00:00
+[2026-02-13T21:50:55.699+0000] {standard_task_runner.py:57} INFO - Started process 1120 to run task
+[2026-02-13T21:50:55.700+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab1', 'load_model_task', 'manual__2026-02-13T21:50:49.809242+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpxytes_k2']
+[2026-02-13T21:50:55.701+0000] {standard_task_runner.py:85} INFO - Job 16: Subtask load_model_task
+[2026-02-13T21:50:55.716+0000] {task_command.py:415} INFO - Running <TaskInstance: Airflow_Lab1.load_model_task manual__2026-02-13T21:50:49.809242+00:00 [running]> on host 4de003d01bda
+[2026-02-13T21:50:55.743+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swarali Degaonkar' AIRFLOW_CTX_DAG_ID='Airflow_Lab1' AIRFLOW_CTX_TASK_ID='load_model_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-13T21:50:49.809242+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-13T21:50:49.809242+00:00'
+[2026-02-13T21:50:55.744+0000] {logging_mixin.py:151} INFO - Optimal no. of clusters for sleep patterns: 12
+[2026-02-13T21:50:55.748+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/base.py:458: UserWarning: X has feature names, but KMeans was fitted without feature names
+  warnings.warn(
+
+[2026-02-13T21:50:55.764+0000] {python.py:194} INFO - Done. Returned value was: 45
+[2026-02-13T21:50:55.778+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab1, task_id=load_model_task, execution_date=20260213T215049, start_date=20260213T215055, end_date=20260213T215055
+[2026-02-13T21:50:55.798+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2026-02-13T21:50:55.804+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,7 @@
+Student_ID,Age,Gender,University_Year,Sleep_Duration,Study_Hours,Screen_Time,Caffeine_Intake,Physical_Activity,Sleep_Quality,Weekday_Sleep_Start,Weekend_Sleep_Start,Weekday_Sleep_End,Weekend_Sleep_End,
+1,22,Other,3rd Year,8.4,7.4,2.8,4,35,7,11.0,18.1,6.76,8.95
+2,24,Male,2nd Year,5.1,9.3,1.9,4,110,4,17.42,8.43,6.93,10.78
+3,20,Male,2nd Year,8.9,7.7,3.5,3,40,4,1.22,15.54,5.85,7.23
+4,21,Male,3rd Year,5.7,6.4,3.9,1,68,10,9.94,2.25,5.46,10.72
+5,18,Female,2nd Year,4.9,0.5,3.5,0,12,2,19.1,15.49,8.35,7.2
+
