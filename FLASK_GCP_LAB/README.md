@@ -22,6 +22,11 @@ A machine learning web application that classifies Palmer Archipelago penguin sp
     ├── test_api.py      – Integration tests for the Flask API
     └── train.py         – Model training and saving script
 ```
+---
+
+## 📸 Screenshots
+
+Screenshots of the application are available in the assets/ folder.
 
 ---
 
