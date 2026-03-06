@@ -5,4 +5,5 @@ This is the repo for all Mlops labs
 
 ## Lab 1 Submission : Github Actions - Lab 1
 ## Lab 2 Submission : Airflow - Lab 1
-## Lab 3 Submission : API_Labs : Fast_GCP_Labs
+## Lab 3 Submission : API_Labs - Fast_GCP_Labs
+## Lab 4 Submission : Data_Labs - Apache Beam Labs
