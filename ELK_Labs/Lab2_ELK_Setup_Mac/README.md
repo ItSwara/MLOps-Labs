@@ -34,7 +34,7 @@ Lab2_ELK_Setup_Mac/
 ├── logstash.conf
 ├── lab6_training.log
 ├── LICENSE
-└── images/
+└── Images/
     ├── elasticsearch.png
     ├── kibana_discover.png
     ├── logstash.png
@@ -121,16 +121,16 @@ The `logstash.conf` file defines three stages:
 ## Screenshots
 
 ### Elasticsearch Running
-![Elasticsearch](images/elasticsearch.png)
+![Elasticsearch](Images/elasticsearch.png)
 
 ### Training Log Output
-![Training Log](images/training_log.png)
+![Training Log](Images/training_log.png)
 
 ### Logstash Parsed Output
-![Logstash Output](images/logstash.png)
+![Logstash Output](Images/logstash.png)
 
 ### Kibana Discover View
-![Kibana Discover](images/kibana_discover.png)
+![Kibana Discover](Images/kibana_discover.png)
 
 ## Cleanup
 
