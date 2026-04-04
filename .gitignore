@@ -2,3 +2,7 @@
 __pycache__
 
 ci-key.json
+
+Terraform_Labs/
+Experiment_Tracking_Labs/
+mlflow.db
