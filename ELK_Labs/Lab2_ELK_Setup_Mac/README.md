@@ -121,7 +121,7 @@ The `logstash.conf` file defines three stages:
 ## Screenshots
 
 ### Elasticsearch Running
-![Elasticsearch](Images/elasticsearch.png)
+![Elasticsearch](Images/elasticserach.png)
 
 ### Training Log Output
 ![Training Log](Images/training_log.png)
